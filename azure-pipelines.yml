@@ -13,9 +13,9 @@ steps:
  # artifact: WebApp
 - task: PublishPipelineArtifact@1
   inputs:
-    #targetPath: '$(Pipeline.Workspace)'
-    #artifact: 'drop'
-    #publishLocation: 'pipeline'
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'drop'
+    publishLocation: 'pipeline'
   
 - script: 
     npm install
