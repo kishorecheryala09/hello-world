@@ -1,28 +1,26 @@
 trigger:
 - master
 pool:
-  vmImage: ubuntu-latest
-
-steps:
+vmImage:ubuntu-latest
+- steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
-
-#- publish: $(System.DefaultWorkingDirectory)/bin/WebApp
- # artifact: WebApp
-- task: PublishPipelineArtifact@1
-  inputs:
-    targetPath: '$(Pipeline.Workspace)'
-    artifact: 'drop'
-    publishLocation: 'pipeline'
-  
-- script: 
-    npm install
-    npm run build
-    npm package
-  displayName: 'npm install and build'
-- task: Docker@2
-  inputs:
-    command: 'buildAndPush'
-    Dockerfile: 'DockerFile'
+- stage:Build
+  displayname:Build 
+jobs:  
+  - job: Build
+    displayName: Build job
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - task: Docker@2
+      displayName: Build and push an image to container registry
+      inputs:
+        command: buildAndPush
+        repository: $(imageRepository)
+        dockerfile: $(dockerfilePath)
+        containerRegistry: $(dockerRegistryServiceConnection)
+        tags: |
+          $(tag)
