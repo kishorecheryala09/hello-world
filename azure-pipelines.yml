@@ -24,28 +24,8 @@ stages:
 
     - task: Docker@2
     displayName: Push an image
-    inputs:
+     inputs:
       azureSubscriptionEndpoint: '$(5a0eee50-4814-4a84-babe-068c6bee0201)'
-      azureContainerRegistry: '$(mynodejs.azurecr.io)'
-      imageName: '$(mynodejs.azurecr.io.image)'
-      command: push
-
-- stage: Deploy
-  displayName: Deploy to Kubernetes
-  dependsOn: Build
-  variables:
-    acrsecret: k8sexamplesacrauth
-    acrdevurl: 'k8sexamplesacr.azurecr.io'
-    replicaNo: 3
-  jobs:
-    - deployment: Deploy
-      displayName: Deploy to AKS
-      environment: 'K8sdev.deafult'
-      pool:
-        vmImage: ubuntu-latest
-      strategy: 
-        runOnce:
-          deploy:
-            steps:
-              - 
-          
+      azureContainerRegistry: '$(classicpipeline.azurecr.io)'
+      imageName: '$(classicpipeline.azurecr.io.image)'
+      command: push         
