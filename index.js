@@ -35,7 +35,7 @@ const db = {
         transactions: [
           { id: '1', date: '2022-10-01', object: 'Gum', amount: -2 },
           { id: '2', date: '2022-10-03', object: 'Book', amount: -10 },
-          { id: '3', date: '2022-10-04', object: 'Restaurant', amount: -45 }
+          { id: '3', date: '2024-10-22', object: 'Restaurant', amount: -45 }
         ],
       }
   
