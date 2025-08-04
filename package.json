@@ -8,7 +8,7 @@
     "scripts": {
         "start": "node index.js",
         "lint": "eslint",
-        "format": "prettier --single-quote --write *.js"    
+        "format": "prettier --single-quote --write *.js",
         "build": "echo 'No build step needed'"
     },
     "devDependencies": {
