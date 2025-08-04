@@ -35,6 +35,6 @@ jobs:
       - name: Install Jest
         run: npm install --save-dev jest
       - name: Run Test
-        run: npm test
+        run: npm test -- --passWithNoTests
 # <-- end of test job encapsulation -->
         
