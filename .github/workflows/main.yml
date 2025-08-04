@@ -17,6 +17,9 @@ jobs:
         run: npm ci
       - name: build
         run: npm run build
+      - name: Deploy the application
+        run: npm run deploy
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
   # <-- end of build job encapsulation -->
   test:
     needs: build
