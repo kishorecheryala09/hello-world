@@ -10,7 +10,8 @@
         "lint": "eslint",
         "format": "prettier --single-quote --write *.js",
         "build": "echo 'No build step needed'",
-        "test": "jest"
+        "test": "jest",
+        "deploy": "echo 'Deploy script here or use a CLI command like az webapp deployment...'"
     },
     "devDependencies": {
         "eslint": "^7.5.0",
