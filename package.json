@@ -9,7 +9,8 @@
         "start": "node index.js",
         "lint": "eslint",
         "format": "prettier --single-quote --write *.js",
-        "build": "echo 'No build step needed'"
+        "build": "echo 'No build step needed'",
+        "test": "jest"
     },
     "devDependencies": {
         "eslint": "^7.5.0",
