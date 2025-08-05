@@ -1,3 +1,4 @@
+[![node.js CI](https://github.com/kishorecheryala09/hello-world/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/kishorecheryala09/hello-world/actions/workflows/main.yml)
 ---
 page_type: sample
 languages:
@@ -16,3 +17,4 @@ This sample demonstrates a tiny Hello World node.js app for [App Service Web App
 ## Contributing
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
