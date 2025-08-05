@@ -6,9 +6,9 @@ jobs:
     runs-on: certification
     steps:
       - name: Checkout code
-        uses: actions/checkout@4
+        uses: actions/checkout@v4.2.2
       - name: Setup node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4.4.0
         with:
           node-version: 18
       - name: Run install
