@@ -2,7 +2,7 @@ name: node.js release
 on: [push]
 
 jobs:
-  buil:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
