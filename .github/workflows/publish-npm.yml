@@ -33,7 +33,7 @@ jobs:
     needs: build_and_package
     steps: 
       - name: Download Package
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v5.0.0
         with:
           name: package
       - name: Setup node.js
