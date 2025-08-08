@@ -24,6 +24,8 @@ jobs:
   test:
     needs: build
     runs-on: ubuntu-latest
+    env:
+      APP_MODE: ${{ vars.APP_MODE }}
     steps:
       - name: checkour code
         uses: actions/checkout@4.2.2
@@ -39,5 +41,7 @@ jobs:
         run: npm install --save-dev jest
       - name: Run Test
         run: npm test -- --passWithNoTests
+      - name: Display Environment Variable
+        run: echo "This is $APP_MODE variable"
 # <-- end of test job encapsulation -->
         
