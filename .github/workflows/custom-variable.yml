@@ -15,7 +15,7 @@ jobs:
           echo "Repository: $GITHUB_REPOSIROTY"
           echo "Action: $GITHUB_ACTION"
           echo "SHA: $GITHUB_SHA"
-          echo "Event Name: £GITHUB_EVENT_NAME"
+          echo "Event Name: $GITHUB_EVENT_NAME"
       - name: Display Environment Variable
         run: echo "MY VARIABLE:$MY_VARIABLE"
         
