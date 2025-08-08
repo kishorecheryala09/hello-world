@@ -23,6 +23,9 @@ jobs:
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          APP_MODE: ${{ vars.APP_MODE }}
         with:
           tag_name: v${{ github.run_number }}
           release_name: Release v${{ github.un_number }}
+      - name: Display Environment Variable
+        run: echo "This is $APP_MODE variable"
