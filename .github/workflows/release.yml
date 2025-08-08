@@ -4,6 +4,8 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    env: 
+      APP_MODE: ${{ vars.APP_MODE }}
     permissions:
       contents: write
     steps:
@@ -22,8 +24,7 @@ jobs:
       - name: Create Release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          APP_MODE: ${{ vars.APP_MODE }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          
         with:
           tag_name: v${{ github.run_number }}
           release_name: Release v${{ github.un_number }}
