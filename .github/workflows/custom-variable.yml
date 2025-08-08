@@ -1,0 +1,21 @@
+name: Environment Variable Example
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    env:
+      MY_VARIABLE: "Hello from Environment Variable"
+    steps:
+      - name: Display Default Variables
+        run: |
+          echo "Repository: $GITHUB_REPOSIROTY"
+          echo "Action: $GITHUB_ACTION"
+          echo "SHA: $GITHUB_SHA"
+          echo "Event Name: £GITHUB_EVENT_NAME"
+      - name: Display Environment Variable
+        run: echo "MY VARIABLE:$MY_VARIABLE"
+        
